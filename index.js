@@ -47,5 +47,5 @@ app.get("/", (req, res) => {
 
 // Start server
 app.listen(config.port, () => {
-    console.log(`Listening on port ${config.port}`)});
-
+    console.log(`Listening on port ${config.port}`);
+});
