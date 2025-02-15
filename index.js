@@ -16,15 +16,6 @@ app.use(cors());
 //   "https://yourfrontend.com" 
 // ];
 
-app.use((req, res, next) => {
-  const origin = req.headers.origin;
-  if (allowedOrigins.includes(origin)) {
-    res.header("Access-Control-Allow-Origin", origin);
-  }
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
-  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  next();
-});
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
